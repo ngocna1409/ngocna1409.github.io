@@ -19,6 +19,7 @@ function toggleElements(element)
 	}
 }
 
+// This won't prevent user entering the same string again (It will toggles visibility).
 function isLinkDisplayedCheck()
 {
 	if (is_the_link_displayed === true)
