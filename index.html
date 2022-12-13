@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html>
-<body onload="siteInit()">
 <script src="logic.js"></script>
-
-<h1>Trung tâm tải xuống EHC</h1>
-<hr>
-<p>Nhấn <b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/documents/Readme.txt">vào đây</a></b> để xem <b>Hướng dẫn cài đặt & Xử lý nhanh lỗi</b>.</p>
-
-<p>Nhấn <b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/installer/ehcHIS_Installer.exe">vào đây</a></b> để tải xuống <b>Trình cài đặt ehcHIS</b>.</p>
-
-<p>Tải xuống <b>Trình cài đặt Cấu hình</b> cho Bệnh viện của bạn: <button onclick="badSecurityCheck()">Lấy liên kết</button></p>
-
-<div id="bvqv" style="display: none;">
-
-	<b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/data_installer/BVQV_27008.exe">Trung tâm Y tế Huyện Quế võ (27008)</a></b>
-
-</div>
-
-<div id="bvqt" style="display: none;">
-
-	<b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/data_installer/BVQT_XXXX.exe">Bệnh viện Quang Thành (XXXXX)</a></b>
-
-</div>	
-<hr>
-<p><i>© <script>document.write(/\d{4}/.exec(Date())[0])</script> EHC Việt Nam. Toàn quyền bảo lưu.</i></p>
+<body onload="siteInit()">
+	<h1>Trung tâm tải xuống EHC</h1>
+		<hr>
+		<p>Nhấn <b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/documents/Readme.txt">vào đây</a></b> để xem <b>Hướng dẫn cài đặt & Xử lý nhanh lỗi</b>.</p>
+		<p>Nhấn <b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/installer/ehcHIS_Installer.exe">vào đây</a></b> để tải xuống <b>Trình cài đặt ehcHIS</b>.</p>
+		<p>Tải xuống <b>Trình cài đặt Cấu hình</b> cho Bệnh viện của bạn: <button onclick="isLinkDisplayedCheck()">Lấy liên kết</button></p>
+		<div id="bvqv" style="display: none;"><b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/data_installer/BVQV_27008.exe">Trung tâm Y tế Huyện Quế võ (27008)</a></b></div>
+		<div id="bvqt" style="display: none;"><b><a href="https://raw.githubusercontent.com/ngocna1409/ehc_public/main/data_installer/BVQT_XXXX.exe">Bệnh viện Quang Thành (XXXXX)</a></b></div>
+	<hr>
+	<p><i>© <script>document.write(/\d{4}/.exec(Date())[0])</script> EHC Việt Nam. Toàn quyền bảo lưu.</i></p>
 </body>
 </html>

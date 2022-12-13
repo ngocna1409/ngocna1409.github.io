@@ -1,9 +1,10 @@
-// Is this really necessary?
-var hospital_codename = "";
+var hospital_codename;
+var is_the_link_displayed;
 
 function siteInit()
 {
-	// Something interesting goes here. Maybe a password prompt?
+	hospital_codename = "";
+	is_the_link_displayed = false;
 }
 
 function toggleElements(element)
@@ -15,6 +16,25 @@ function toggleElements(element)
 	else
 	{
 		element.style.display = "none";
+	}
+}
+
+function isLinkDisplayedCheck()
+{
+	if (is_the_link_displayed === true)
+	{	
+		if (confirm("Liên kết đã hiển thị ở bên dưới.\nBạn muốn chọn mã khác?"))
+		{
+			badSecurityCheck();
+		}
+		else
+		{
+			return;
+		}
+	}
+	else
+	{
+		badSecurityCheck();
 	}
 }
 
@@ -31,10 +51,11 @@ function badSecurityCheck()
 	// REALLY?
 	if (is_it_really_valid === true) {
 		toggleElements(document.getElementById(hospital_codename));
+		is_the_link_displayed = true;
 	}
 	else
 	{
 		alert("Sai mã bệnh viện hoặc bạn đã từ chối nhập.");
+		is_the_link_displayed = false;
 	}
 }
-
