@@ -1,9 +1,9 @@
-var hospital_codename;
+var codename_validation;
 var is_the_link_displayed;
 
 function siteInit()
 {
-	hospital_codename = "";
+	codename_validation = "";
 	is_the_link_displayed = false;
 }
 
@@ -43,20 +43,25 @@ function badSecurityCheck()
 {
 	// If you want to find the code. This is it.
 	const valid_hospitals = ['bvqv','bvqt'];
-	var hospital_codename = prompt("Nhập mã bệnh viện của bạn để hiển thị:");
+	var codename_validation = prompt("Nhập mã bệnh viện của bạn:");
 	
 	// Compares a literal string with all arrays defined.
 	const is_it_really_valid = valid_hospitals.some(element => {
-	if (hospital_codename.toLowerCase().includes(element.toLowerCase())){ return true; } return false; });
+	if (codename_validation.toLowerCase().includes(element.toLowerCase())){ return true; } return false; });
 	
 	// REALLY?
-	if (is_it_really_valid === true) {
-		toggleElements(document.getElementById(hospital_codename));
+	if (is_it_really_valid === true  | codename_validation !== "") {
+		toggleElements(document.getElementById(codename_validation));
 		is_the_link_displayed = true;
+	}
+	else if (is_it_really_valid === true | codename_validation === "")
+	{
+		alert("Chưa nhập thông tin.");
+		is_the_link_displayed = false;
 	}
 	else
 	{
-		alert("Sai mã bệnh viện hoặc bạn đã từ chối nhập.");
+		alert("Sai mã bệnh viện.");
 		is_the_link_displayed = false;
 	}
 }
